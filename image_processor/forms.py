@@ -1,5 +1,5 @@
 from django import forms
-from .models import UploadedImage, CropRecommendation, FertilizerRecommendation
+from .models import UploadedImage
 
 class UploadImageForm(forms.ModelForm):
     class Meta:
@@ -7,7 +7,3 @@ class UploadImageForm(forms.ModelForm):
         fields = ['image']
 
 
-class CropRecommendationForm(forms.ModelForm):
-    class Meta:
-        model = CropRecommendation
-        fields = ['nitrogen', 'patassium', 'calcium', 'temperature', 'humidity', 'ph', 'rainfall']

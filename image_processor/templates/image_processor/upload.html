@@ -10,6 +10,13 @@
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form }}
+    <label for="crop_type">Select Crop Type:</label>
+    <select name="crop_type" id="crop_type">
+        <option value="apple">Apple</option>
+        <option value="tomato">Tomato</option>
+        <option value="maize">Maize</option>
+        <option value="potato">Potato</option>
+    </select>
     <button type="submit">Submit</button>
 </form>
 
